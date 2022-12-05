@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoCrazy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i0v-1v-58f">
+                                <rect key="frame" x="0.0" y="47" width="375" height="731"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CryptoCell" rowHeight="97" id="VPd-cF-5BO" customClass="CryptoCell" customModule="CryptoCrazy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VPd-cF-5BO" id="Ngq-jR-uNO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4s-w5-gVh">
+                                                    <rect key="frame" x="20" y="11" width="232" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="232" id="9cY-8z-RLG"/>
+                                                        <constraint firstAttribute="height" constant="32" id="NCk-ym-pu6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftA-Ik-Xlu">
+                                                    <rect key="frame" x="20" y="57" width="232" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k4s-w5-gVh" firstAttribute="leading" secondItem="ftA-Ik-Xlu" secondAttribute="leading" id="Ecd-hQ-ZVZ"/>
+                                                <constraint firstItem="k4s-w5-gVh" firstAttribute="top" secondItem="Ngq-jR-uNO" secondAttribute="topMargin" id="LWF-bv-h8d"/>
+                                                <constraint firstItem="k4s-w5-gVh" firstAttribute="leading" secondItem="Ngq-jR-uNO" secondAttribute="leadingMargin" id="pd1-2c-CL5"/>
+                                                <constraint firstItem="ftA-Ik-Xlu" firstAttribute="top" secondItem="k4s-w5-gVh" secondAttribute="bottom" constant="14" id="tMx-PD-SWY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ftA-Ik-Xlu" secondAttribute="bottom" constant="-3" id="vkW-IS-Kua"/>
+                                                <constraint firstItem="k4s-w5-gVh" firstAttribute="trailing" secondItem="ftA-Ik-Xlu" secondAttribute="trailing" id="xjf-Os-p5e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyText" destination="k4s-w5-gVh" id="903-GC-JAC"/>
+                                            <outlet property="priceText" destination="ftA-Ik-Xlu" id="2mg-s2-hBn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i0v-1v-58f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U7S-xd-EKP"/>
+                            <constraint firstItem="i0v-1v-58f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i7V-nh-zJY"/>
+                            <constraint firstItem="i0v-1v-58f" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jgH-ZK-L0t"/>
+                            <constraint firstItem="i0v-1v-58f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lPV-77-elg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="i0v-1v-58f" id="ues-Tp-7RD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="3.6945812807881775"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
