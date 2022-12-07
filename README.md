@@ -1,4 +1,4 @@
 # CryptoApp-MVVM
 
 
-An App built using the MVVM architecture.
+An App built using the MVVM architecture...
